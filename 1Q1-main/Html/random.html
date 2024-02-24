@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Page</title>
+    <script>
+        
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        
+        function redirectToRandomPage() {
+            
+            var pages = [
+                "index.html",
+                "entry.html",
+                "about.html",
+                "edit.html",
+                "markdown.html",
+                "random.html" 
+            ];
+            
+            var randomIndex = getRandomInt(0, pages.length - 1);
+           
+            var randomPage = pages[randomIndex];
+
+                window.location.href = randomPage;
+        }
+    </script>
+</head>
+<body>
+    <h1>Click the button below to go to a random page:</h1>
+    <button onclick="redirectToRandomPage()">Go to Random Page</button>
+    
+</head>
+<body class="container">
+    <header>
+        <h1>Random Page</h1>
+    </header>
+
+
+    <footer>
+        <p>&copy; CSM 399 (Group) 1Q1</p>
+    </footer>
+</body>
+</html>
